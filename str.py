@@ -3,7 +3,7 @@ class Soution:
     def str(self):
         string = 'qwsf'
 
-        s1 = string.capitalize()  # 把字符串的第一个字符大写
+        '''s1 = string.capitalize()  # 把字符串的第一个字符大写
         print(s1)
 
         s2 = string.count('s', 0, len(string))  # 返回 s 在 string 里面出现的次数，0, len(string)指定则返回指定范围内
@@ -54,7 +54,32 @@ class Soution:
 
         s20 = string.title()  #  所有单词都是以大写开始，其余字母均为小写
 
-        s21 = string.upper()  # 小写字母为大写
+        s21 = string.upper()  # 小写字母为大写'''
+
+        # 切片原理
+
+        # 1.两参数：[开始：结束]
+        # 字符串中用法
+        '''str = 'python'
+        print(str[0:3])  # pyt  左闭右开，从位置0到 位置3前的位置2
+        print(str[0:5])  # pytho 左闭右开，从位置0到 位置5前的位置4
+        print(str[:-1])  # pytho  左闭右开，从位置0到 位置-1前的-2位置
+        print(str[:-2])  # pyth  左闭右开，从位置0到 位置-2前的-3位置'''
+
+        '''     
+        2.三参数：[开始：结束：步长]
+        知识点1： 步长的正负
+        步长的值 > 0，则：从左往右取值
+        步长的值 < 0，则：从右往左取值
+        '''
+
+
+        str = 'python'
+        print(str[::])  # python
+        print(str[::1]) # python
+        print(str[::2]) # pto 从左往右数，数2步，取一个值
+        print(str[::-1]) # nohtyp 从右往左数，数1步，取一个值，即：取全部值
+        print(str[::-2]) # nhy 从右往左数，数2步，取一个值
 
 
 Soution().str()
